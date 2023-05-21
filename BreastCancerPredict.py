@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -7,8 +5,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
 import pickle as pickle
-
-
 
 ## Clean Data
 data = pd.read_csv("data/data.csv")
@@ -21,9 +17,6 @@ data["diagnosis"] = data["diagnosis"].map({"M":1,"B":0})
 
 X = data.drop(["diagnosis"], axis=1)  # The one we need in order to predict
 Y = data["diagnosis"]  # The one we want to predict
-
-X = data.drop(["diagnosis"], axis=1)
-Y = data["diagnosis"]
 
 ### Scale the Data
 
